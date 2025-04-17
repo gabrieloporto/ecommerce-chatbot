@@ -12,12 +12,15 @@ import {
   PlusIcon,
   TrashIcon,
 } from "@/app/components/Icons";
+import { useState } from "react";
 
 interface Props {
   params: { id: string };
 }
 
 export default function ProductDetail({ params }: Props) {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const product = products.find((p) => p.id === parseInt(params.id));
   const { cart, decreaseQuantity, increaseQuantity, removeFromCart } =
     useCart();
@@ -30,7 +33,7 @@ export default function ProductDetail({ params }: Props) {
 
   return (
     <>
-      <Header />
+      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <div className="p-6 max-w-3xl mx-auto">
         <Link
