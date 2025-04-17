@@ -3,11 +3,13 @@ import { notFound } from "next/navigation";
 import ProductDetail from "@/app/components/ProductDetail";
 import { Metadata } from "next";
 
-type Props = {
+type PageProps = {
   params: { id: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) {
@@ -22,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
+export default function Page({ params }: PageProps) {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) return notFound();
