@@ -13,7 +13,6 @@
     "@huggingface/inference": "^3.8.1",
     "@pinecone-database/pinecone": "^5.1.1",
     "ai": "^4.3.9",
-    "deep-chat-react": "^2.1.1",
     "lucide-react": "^0.488.0",
     "next": "15.3.0",
     "react": "^19.0.0",
