@@ -46,7 +46,7 @@ Este proyecto es una aplicación fullstack de un ecommerce con un chatbot inteli
 
 5. Integración con DeepInfra para generar respuestas naturales con el modelo Qwen2-7B-Instruct.
 
-6. Renderizado en el frontend (en progreso o ya listo, según tu avance).
+6. Renderizado en el frontend.
 
 7. Pruebas locales y optimización del prompt para asegurar respuestas precisas y útiles.
 
